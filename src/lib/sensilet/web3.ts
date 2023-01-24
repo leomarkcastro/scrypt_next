@@ -76,6 +76,7 @@ export class web3 {
           throw new Error("no utxo available");
         }
         const tx = new bsv.Transaction();
+        // @ts-ignore
         tx.from([utxos[0]])
           .addOutput(
             new bsv.Transaction.Output({
@@ -109,8 +110,9 @@ export class web3 {
       new bsv.Transaction.Input({
         prevTxId: contractUtxo.txId,
         outputIndex: contractUtxo.outputIndex,
-        script: new bsv.Script(), // placeholder
+        script: new bsv.Script(""), // placeholder
         output: new bsv.Transaction.Output({
+          // @ts-ignore
           script: contractUtxo.script,
           satoshis: contractUtxo.satoshis,
         }),

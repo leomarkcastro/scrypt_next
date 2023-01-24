@@ -78,7 +78,7 @@ export class SensiletWallet extends wallet {
       ],
     });
 
-    const unlockScript = new bsv.Script()
+    const unlockScript = new bsv.Script("")
       .add(Buffer.from(res.sigList[0].sig, "hex"))
       .add(Buffer.from(res.sigList[0].publicKey, "hex"));
 
@@ -151,7 +151,7 @@ export class SensiletWallet extends wallet {
 
   async getNetwork(options?: { purpose?: string }): Promise<NetWork> {
     const address = await this.sensilet.getAddress();
-    const a = new bsv.Address.fromString(address);
+    const a = bsv.Address.fromString(address);
     return a.network.name === "testnet" ? NetWork.Testnet : NetWork.Mainnet;
   }
 }
