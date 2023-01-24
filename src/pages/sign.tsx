@@ -1,5 +1,5 @@
-import { SensiletWallet, SignType, web3 } from "@/lib/sensilet";
-import { bsv, getPreimage, Int, signTx } from "scryptlib";
+import { SensiletWallet, web3 } from "@/lib/sensilet";
+import { bsv, getPreimage, Int } from "scryptlib";
 import { useEffect, useState } from "react";
 
 import { ContractUtxos } from "@/lib/sensilet/storage";
@@ -8,11 +8,9 @@ export default function Home() {
   const [states, updateStates] = useState<{
     contract: any;
     isConnected: boolean;
-    wallet: SensiletWallet | null;
   }>({
     contract: null,
     isConnected: false,
-    wallet: null,
   });
 
   const [counter, updateCounter] = useState(0);
@@ -56,7 +54,6 @@ export default function Home() {
     updateStates({
       contract,
       isConnected,
-      wallet,
     });
   }
 
@@ -85,7 +82,7 @@ export default function Home() {
     const contractUtxo = await ContractUtxos.getlast().utxo;
 
     await web3
-      .call(contractUtxo, (tx) => {
+      .call(contractUtxo, async (tx) => {
         console.log("tx", tx);
         // next counter value
         const curCounter = counter;
@@ -108,8 +105,28 @@ export default function Home() {
           });
         });
 
-        tx.setInputScript(0, async (tx, output) => {
+        await tx.setInputScriptAsync(0, async (tx, output) => {
           const preimage = getPreimage(tx, output.script, output.satoshis);
+          // const privateKey = bsv.PrivateKey.fromWIF(
+          //   PlayerPrivkey.get(CurrentPlayer.get() as string) as string
+          // );
+          // const sig = signTx(tx, privateKey, output.script, output.satoshis);
+
+          // const privateKey = bsv.PrivateKey.fromWIF(
+          //   "cNY9yYHscPYysJzNY2ZFjUvhwaUqz51YN2jKYTFo8qpZtyJd2k97"
+          // );
+          // const sig = signTx(tx, privateKey, output.script, output.satoshis);
+          // console.log("sig", sig);
+
+          const sig2 = await web3.signSignature(
+            tx.toString(),
+            contractUtxo.script,
+            contractUtxo.satoshis
+          );
+          console.log("sig2", sig2);
+
+          // console.log("sig === sig2", sig === sig2);
+
           const amount = contractUtxo.satoshis - tx.getEstimateFee();
 
           if (amount < 1) {
@@ -117,32 +134,8 @@ export default function Home() {
             throw new Error("Not enough funds.");
           }
 
-          let rawTx = states.contract
-            .increment_num(preimage, amount)
-            .toScript();
-
-          // console.log("rawTx", rawTx.toString());
-
-          const privateKey = bsv.PrivateKey.fromWIF(
-            "cNY9yYHscPYysJzNY2ZFjUvhwaUqz51YN2jKYTFo8qpZtyJd2k97"
-          );
-          const sig = signTx(tx, privateKey, output.script, output.satoshis);
-          console.log("sig", sig);
-
-          const public_addres = await states.wallet.getRawChangeAddress();
-          console.log("public_addres", public_addres);
-
-          const sig2 = await states.wallet.signRawTransaction(
-            rawTx.toString(),
-            output.script,
-            output.satoshis,
-            0,
-            SignType.ANYONECANPAY_ALL
-          );
-          console.log("sig2", sig2);
-
-          return rawTx;
-        }).seal();
+          return states.contract.increment_num(preimage, amount).toScript();
+        });
       })
       .then((rawTx) => {
         const utxo = ContractUtxos.add(rawTx);

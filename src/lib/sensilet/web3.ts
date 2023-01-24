@@ -40,6 +40,25 @@ export class web3 {
     return web3.wallet.sendRawTransaction(rawTx);
   }
 
+  static async signSignature(
+    currentTx: string,
+    lastTxScript: string,
+    lastTxSatoshi: number,
+    signType?: SignType
+  ): Promise<string> {
+    const changeAddress = await web3.wallet.getRawChangeAddress();
+    return (
+      await web3.wallet.getSignature(
+        currentTx,
+        lastTxScript,
+        lastTxSatoshi,
+        0,
+        signType || SignType.ALL,
+        changeAddress
+      )
+    ).signature.toString();
+  }
+
   static async deploy(
     contract: AbstractContract,
     amountInContract: number
@@ -98,7 +117,8 @@ export class web3 {
       })
     );
 
-    cbBuildTx(tx);
+    await cbBuildTx(tx);
+    await tx.sealAsync();
 
     const rawTx = tx.toString();
     await web3.sendRawTx(rawTx);

@@ -112,6 +112,21 @@ export default function Home() {
           // );
           // const sig = signTx(tx, privateKey, output.script, output.satoshis);
 
+          // const privateKey = bsv.PrivateKey.fromWIF(
+          //   "cNY9yYHscPYysJzNY2ZFjUvhwaUqz51YN2jKYTFo8qpZtyJd2k97"
+          // );
+          // const sig = signTx(tx, privateKey, output.script, output.satoshis);
+          // console.log("sig", sig);
+
+          // const sig2 = await web3.signSignature(
+          //   tx.toString(),
+          //   contractLastUtxo.script,
+          //   contractLastUtxo.satoshis
+          // );
+          // console.log("sig2", sig2);
+
+          // console.log("sig === sig2", sig === sig2);
+
           const amount = contractUtxo.satoshis - tx.getEstimateFee();
 
           if (amount < 1) {

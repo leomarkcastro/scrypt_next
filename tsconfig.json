@@ -23,6 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     "tools/compile_contract.js",
     "tools/compile_contract.js"
   ],

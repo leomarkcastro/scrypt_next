@@ -160,7 +160,9 @@ function getAddressFromP2PKH(script: string, network: NetWork): string {
   const asm = bsv.Script.fromHex(script).toASM();
   //OP_DUP OP_HASH160 ${address} OP_EQUALVERIFY OP_CHECKSIG
   const pubKeyHash = asm.split(" ")[2]; //get address from script
-  const address = new bsv.Address.fromHex(
+  console.log(asm);
+  console.log(`${network === NetWork.Testnet ? "6f" : "00"}${pubKeyHash}`);
+  const address = bsv.Address.fromHex(
     `${network === NetWork.Testnet ? "6f" : "00"}${pubKeyHash}`
   ).toString();
   return address;
