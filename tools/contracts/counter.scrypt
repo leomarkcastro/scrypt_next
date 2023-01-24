@@ -1,0 +1,17 @@
+contract CounterTest {
+
+    @state
+    int counter;
+
+    public function increment_num(SigHashPreimage txPreimage, int amount) {
+        require(Tx.checkPreimage(txPreimage));
+        // increment counter
+        this.counter++;
+        // serialize the state of the contract
+        bytes outputScript = this.getStateScript();
+        // construct an output from its locking script and satoshi amount
+        bytes output = Utils.buildOutput(outputScript, amount);
+        // make sure the transaction contains the expected outputs
+        require(hash256(output) == SigHash.hashOutputs(txPreimage));
+    }
+}

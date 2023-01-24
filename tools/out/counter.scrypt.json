@@ -1,0 +1,551 @@
+{
+  "errors": [],
+  "warnings": [],
+  "compilerVersion": "1.19.0+commit.72eaeba",
+  "md5": "9fe2a97cf71f4c0d5de42e5e70687054",
+  "buildType": "debug",
+  "file": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+  "ast": {
+    "nodeType": "Program",
+    "structs": [],
+    "alias": [],
+    "imports": [],
+    "contracts": [
+      {
+        "nodeType": "Contract",
+        "name": "CounterTest",
+        "constructor": null,
+        "statics": [],
+        "functions": [
+          {
+            "nodeType": "FunctionDefinition",
+            "body": {
+              "nodeType": "FunctionBodyRegular",
+              "return": null,
+              "stmts": [
+                {
+                  "nodeType": "Requirement",
+                  "expr": {
+                    "nodeType": "MethodCall",
+                    "objExpr": {
+                      "nodeType": "Variable",
+                      "name": "Tx",
+                      "loc": {
+                        "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                        "start": {
+                          "line": 7,
+                          "column": 17
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 19
+                        }
+                      }
+                    },
+                    "methodName": "checkPreimage",
+                    "params": [
+                      {
+                        "nodeType": "Variable",
+                        "name": "txPreimage",
+                        "loc": {
+                          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                          "start": {
+                            "line": 7,
+                            "column": 34
+                          },
+                          "end": {
+                            "line": 7,
+                            "column": 44
+                          }
+                        }
+                      }
+                    ],
+                    "loc": {
+                      "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                      "start": {
+                        "line": 7,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 45
+                      }
+                    }
+                  },
+                  "loc": {
+                    "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                    "start": {
+                      "line": 7,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 47
+                    }
+                  }
+                },
+                {
+                  "nodeType": "ExprStatement",
+                  "expr": {
+                    "nodeType": "UnaryExpr",
+                    "expr": {
+                      "nodeType": "BinaryExpr",
+                      "lExpr": {
+                        "nodeType": "Variable",
+                        "name": "this",
+                        "loc": {
+                          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                          "start": {
+                            "line": 9,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "name": "Dot",
+                      "rExpr": {
+                        "nodeType": "Variable",
+                        "name": "counter",
+                        "loc": {
+                          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                          "start": {
+                            "line": 9,
+                            "column": 14
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "loc": {
+                        "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                        "start": {
+                          "line": 9,
+                          "column": 9
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 21
+                        }
+                      }
+                    },
+                    "name": "PostIncrement",
+                    "loc": {
+                      "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                      "start": {
+                        "line": 9,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 23
+                      }
+                    }
+                  },
+                  "loc": {
+                    "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                    "start": {
+                      "line": 9,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 24
+                    }
+                  }
+                },
+                {
+                  "nodeType": "VariableDeclaration",
+                  "expr": {
+                    "nodeType": "FunctionCall",
+                    "params": [],
+                    "name": "this.getStateScript",
+                    "loc": {
+                      "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                      "start": {
+                        "line": 11,
+                        "column": 30
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 51
+                      }
+                    }
+                  },
+                  "name": "outputScript",
+                  "const": false,
+                  "type": "bytes",
+                  "loc": {
+                    "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                    "start": {
+                      "line": 11,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 52
+                    }
+                  }
+                },
+                {
+                  "nodeType": "VariableDeclaration",
+                  "expr": {
+                    "nodeType": "MethodCall",
+                    "objExpr": {
+                      "nodeType": "Variable",
+                      "name": "Utils",
+                      "loc": {
+                        "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                        "start": {
+                          "line": 13,
+                          "column": 24
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 29
+                        }
+                      }
+                    },
+                    "methodName": "buildOutput",
+                    "params": [
+                      {
+                        "nodeType": "Variable",
+                        "name": "outputScript",
+                        "loc": {
+                          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                          "start": {
+                            "line": 13,
+                            "column": 42
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 54
+                          }
+                        }
+                      },
+                      {
+                        "nodeType": "Variable",
+                        "name": "amount",
+                        "loc": {
+                          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                          "start": {
+                            "line": 13,
+                            "column": 56
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 62
+                          }
+                        }
+                      }
+                    ],
+                    "loc": {
+                      "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                      "start": {
+                        "line": 13,
+                        "column": 24
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 63
+                      }
+                    }
+                  },
+                  "name": "output",
+                  "const": false,
+                  "type": "bytes",
+                  "loc": {
+                    "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                    "start": {
+                      "line": 13,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 64
+                    }
+                  }
+                },
+                {
+                  "nodeType": "Requirement",
+                  "expr": {
+                    "nodeType": "BinaryExpr",
+                    "lExpr": {
+                      "nodeType": "FunctionCall",
+                      "params": [
+                        {
+                          "nodeType": "Variable",
+                          "name": "output",
+                          "loc": {
+                            "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                            "start": {
+                              "line": 15,
+                              "column": 25
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 31
+                            }
+                          }
+                        }
+                      ],
+                      "name": "hash256",
+                      "loc": {
+                        "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                        "start": {
+                          "line": 15,
+                          "column": 17
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 32
+                        }
+                      }
+                    },
+                    "name": "Equal",
+                    "rExpr": {
+                      "nodeType": "MethodCall",
+                      "objExpr": {
+                        "nodeType": "Variable",
+                        "name": "SigHash",
+                        "loc": {
+                          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                          "start": {
+                            "line": 15,
+                            "column": 36
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 43
+                          }
+                        }
+                      },
+                      "methodName": "hashOutputs",
+                      "params": [
+                        {
+                          "nodeType": "Variable",
+                          "name": "txPreimage",
+                          "loc": {
+                            "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                            "start": {
+                              "line": 15,
+                              "column": 56
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 66
+                            }
+                          }
+                        }
+                      ],
+                      "loc": {
+                        "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                        "start": {
+                          "line": 15,
+                          "column": 36
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 67
+                        }
+                      }
+                    },
+                    "loc": {
+                      "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                      "start": {
+                        "line": 15,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 67
+                      }
+                    }
+                  },
+                  "loc": {
+                    "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                    "start": {
+                      "line": 15,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 69
+                    }
+                  }
+                }
+              ],
+              "loc": {
+                "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                "start": {
+                  "line": 6,
+                  "column": 75
+                },
+                "end": {
+                  "line": 16,
+                  "column": 6
+                }
+              }
+            },
+            "static": false,
+            "visibility": "Public",
+            "params": [
+              {
+                "nodeType": "Parameter",
+                "name": "txPreimage",
+                "const": false,
+                "type": "SigHashPreimage",
+                "loc": {
+                  "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                  "start": {
+                    "line": 6,
+                    "column": 35
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 61
+                  }
+                }
+              },
+              {
+                "nodeType": "Parameter",
+                "name": "amount",
+                "const": false,
+                "type": "int",
+                "loc": {
+                  "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+                  "start": {
+                    "line": 6,
+                    "column": 63
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 73
+                  }
+                }
+              }
+            ],
+            "name": "increment_num",
+            "returnType": null,
+            "loc": {
+              "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+              "start": {
+                "line": 6,
+                "column": 12
+              },
+              "end": {
+                "line": 16,
+                "column": 6
+              }
+            }
+          }
+        ],
+        "properties": [
+          {
+            "nodeType": "Property",
+            "state": true,
+            "visibility": "Default",
+            "name": "counter",
+            "const": false,
+            "type": "int",
+            "loc": {
+              "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+              "start": {
+                "line": 4,
+                "column": 5
+              },
+              "end": {
+                "line": 4,
+                "column": 16
+              }
+            }
+          }
+        ],
+        "loc": {
+          "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+          "start": {
+            "line": 1,
+            "column": 10
+          },
+          "end": {
+            "line": 17,
+            "column": 2
+          }
+        }
+      }
+    ],
+    "loc": {
+      "source": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/contracts/counter.scrypt",
+      "start": {
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "line": 17,
+        "column": 2
+      }
+    }
+  },
+  "dependencyAsts": {},
+  "contracts": [
+    {
+      "name": "CounterTest",
+      "params": [
+        {
+          "name": "counter",
+          "type": "int"
+        }
+      ],
+      "properties": [
+        {
+          "name": "counter",
+          "type": "int"
+        }
+      ],
+      "genericTypes": []
+    }
+  ],
+  "alias": [],
+  "structs": [],
+  "library": [],
+  "statics": [],
+  "stateProps": [
+    {
+      "name": "counter",
+      "type": "int"
+    }
+  ],
+  "abi": [
+    {
+      "type": "function",
+      "name": "increment_num",
+      "index": 0,
+      "params": [
+        {
+          "name": "txPreimage",
+          "type": "SigHashPreimage"
+        },
+        {
+          "name": "amount",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "type": "constructor",
+      "params": [
+        {
+          "name": "counter",
+          "type": "int"
+        }
+      ]
+    }
+  ],
+  "contract": "CounterTest",
+  "hex": "5101402097dfd76851bf465e8f715593b217714858bbe9570ff3bd5e33840a34e20ff0262102ba79df5f8ae7604a9830f03c7933028186aede0675a16f025dc4f8be8eec0382201008ce7480da41702918d1ec8e6849ba32b4d65b1e40dc669c31a1e6306b266c<counter><__codePart__>587961007901687f776100005279517f75007f77007901fd87635379537f75517f7761007901007e81517a7561537a75527a527a5379535479937f75537f77527a75517a67007901fe87635379557f75517f7761007901007e81517a7561537a75527a527a5379555479937f75557f77527a75517a67007901ff87635379597f75517f7761007901007e81517a7561537a75527a527a5379595479937f75597f77527a75517a675379517f75007f7761007901007e81517a7561537a75527a527a5379515479937f75517f77527a75517a6868685179517a75517a75517a75517a7561517a7561007961007982775179517951947f755179549451947f77007981527951799454945194517a75517a75517a75517a7561517951797f75537a75527a527a0000537953797f77610079537a75527a527a00527a75517a7561615179517951937f7551797f775179768b537a75527a527a75010051798791517a7561007991636161005379005179557951937f7555797f77815579768b577a75567a567a567a567a567a567a750079014c9f630079547a75537a537a537a527956795579937f7556797f77527a75517a670079014c9c635279567951937f7556797f7761007901007e81517a7561547a75537a537a537a55795193567a75557a557a557a557a557a557975527956795579937f7556797f77527a75517a670079014d9c635279567952937f7556797f7761007901007e81517a7561547a75537a537a537a55795293567a75557a557a557a557a557a557975527956795579937f7556797f77527a75517a670079014e9c635279567954937f7556797f7761007901007e81517a7561547a75537a537a537a55795493567a75557a557a557a557a557a557975527956795579937f7556797f77527a75517a670069686868685579547993567a75557a557a557a557a557a5579755179517a75517a75517a75517a75618161577a75567a567a567a567a567a567a685d796100795b795b79210ac407f0e4bd44bfc207355a778b046225a7068fc59ee7eda43ad905aadbffc800206c266b30e6a1319c66dc401e5bd6b432ba49688eecd118297041da8074ce08105d7901127901127985615679aa0079610079517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e01007e81517a75615779567956795679567961537956795479577995939521414136d08c5ed2bf3ba048afe6dcaebafeffffffffffffffffffffffffffffff00517951796151795179970079009f63007952799367007968517a75517a75517a7561527a75517a517951795296a0630079527994527a75517a6853798277527982775379012080517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f517f7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e7c7e01205279947f7754537993527993013051797e527e54797e58797e527e53797e52797e57797e0079517a75517a75517a75517a75517a75517a75517a75517a75517a75517a75517a75517a75517a756100795779ac517a75517a75517a75517a75517a75517a75517a75517a75517a7561517a7561695679768b587a75577a577a577a577a577a577a577a756100610079635167010068517a75615779610079009c630100670079686100798277005179014c9f63517951615179517951938000795179827751947f75007f77517a75517a75517a7561517a756751790200019f63014c527951615179517951938000795179827751947f75007f77517a75517a75517a75617e517a75675179030000019f63014d527952615179517951938000795179827751947f75007f77517a75517a75517a75617e517a756751790500000000019f63014e527954615179517951938000795179827751947f75007f77517a75517a75517a75617e517a7567006968686868007953797e517a75517a75517a7561517a75617e5679517961007982775480517951797e0051807e517a75517a75617e517a756100795e7961007958805279610079827700517902fd009f63517951615179517951938000795179827751947f75007f77517a75517a75517a7561517a75675179030000019f6301fd527952615179517951938000795179827751947f75007f77517a75517a75517a75617e517a756751790500000000019f6301fe527954615179517951938000795179827751947f75007f77517a75517a75517a75617e517a75675179090000000000000000019f6301ff527958615179517951938000795179827751947f75007f77517a75517a75517a75617e517a7568686868007953797e517a75517a75517a75617e517a75517a75610079aa607961007982775179517958947f7551790128947f77517a75517a75618777777777777777777777777777777777",
+  "sourceMapFile": "file:///C:/Users/leoma/Desktop/scrypt/test_react_fe/scrypt_next/tools/out/counter.map.json"
+}

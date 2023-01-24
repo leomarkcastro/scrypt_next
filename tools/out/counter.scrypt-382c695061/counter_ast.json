@@ -1,0 +1,187 @@
+{
+    "stdin": {
+        "nodeType": "Program",
+        "structs": [],
+        "alias": [],
+        "imports": [],
+        "contracts": [
+            {
+                "nodeType": "Contract",
+                "name": "CounterTest",
+                "src": ":1:10:17:2",
+                "constructor": null,
+                "statics": [],
+                "functions": [
+                    {
+                        "nodeType": "FunctionDefinition",
+                        "body": {
+                            "nodeType": "FunctionBodyRegular",
+                            "return": null,
+                            "stmts": [
+                                {
+                                    "nodeType": "Requirement",
+                                    "expr": {
+                                        "nodeType": "MethodCall",
+                                        "objExpr": {
+                                            "nodeType": "Variable",
+                                            "name": "Tx",
+                                            "src": ":7:17:7:19"
+                                        },
+                                        "methodName": "checkPreimage",
+                                        "params": [
+                                            {
+                                                "nodeType": "Variable",
+                                                "name": "txPreimage",
+                                                "src": ":7:34:7:44"
+                                            }
+                                        ],
+                                        "src": ":7:17:7:45"
+                                    },
+                                    "src": ":7:9:7:47"
+                                },
+                                {
+                                    "nodeType": "ExprStatement",
+                                    "expr": {
+                                        "nodeType": "UnaryExpr",
+                                        "expr": {
+                                            "nodeType": "BinaryExpr",
+                                            "lExpr": {
+                                                "nodeType": "Variable",
+                                                "name": "this",
+                                                "src": ":9:9:9:13"
+                                            },
+                                            "name": "Dot",
+                                            "src": ":9:9:9:21",
+                                            "rExpr": {
+                                                "nodeType": "Variable",
+                                                "name": "counter",
+                                                "src": ":9:14:9:21"
+                                            }
+                                        },
+                                        "name": "PostIncrement",
+                                        "src": ":9:9:9:23"
+                                    },
+                                    "src": ":9:9:9:24"
+                                },
+                                {
+                                    "nodeType": "VariableDeclaration",
+                                    "expr": {
+                                        "nodeType": "FunctionCall",
+                                        "params": [],
+                                        "name": "this.getStateScript",
+                                        "src": ":11:30:11:51"
+                                    },
+                                    "name": "outputScript",
+                                    "src": ":11:9:11:52",
+                                    "const": false,
+                                    "type": "bytes"
+                                },
+                                {
+                                    "nodeType": "VariableDeclaration",
+                                    "expr": {
+                                        "nodeType": "MethodCall",
+                                        "objExpr": {
+                                            "nodeType": "Variable",
+                                            "name": "Utils",
+                                            "src": ":13:24:13:29"
+                                        },
+                                        "methodName": "buildOutput",
+                                        "params": [
+                                            {
+                                                "nodeType": "Variable",
+                                                "name": "outputScript",
+                                                "src": ":13:42:13:54"
+                                            },
+                                            {
+                                                "nodeType": "Variable",
+                                                "name": "amount",
+                                                "src": ":13:56:13:62"
+                                            }
+                                        ],
+                                        "src": ":13:24:13:63"
+                                    },
+                                    "name": "output",
+                                    "src": ":13:9:13:64",
+                                    "const": false,
+                                    "type": "bytes"
+                                },
+                                {
+                                    "nodeType": "Requirement",
+                                    "expr": {
+                                        "nodeType": "BinaryExpr",
+                                        "lExpr": {
+                                            "nodeType": "FunctionCall",
+                                            "params": [
+                                                {
+                                                    "nodeType": "Variable",
+                                                    "name": "output",
+                                                    "src": ":15:25:15:31"
+                                                }
+                                            ],
+                                            "name": "hash256",
+                                            "src": ":15:17:15:32"
+                                        },
+                                        "name": "Equal",
+                                        "src": ":15:17:15:67",
+                                        "rExpr": {
+                                            "nodeType": "MethodCall",
+                                            "objExpr": {
+                                                "nodeType": "Variable",
+                                                "name": "SigHash",
+                                                "src": ":15:36:15:43"
+                                            },
+                                            "methodName": "hashOutputs",
+                                            "params": [
+                                                {
+                                                    "nodeType": "Variable",
+                                                    "name": "txPreimage",
+                                                    "src": ":15:56:15:66"
+                                                }
+                                            ],
+                                            "src": ":15:36:15:67"
+                                        }
+                                    },
+                                    "src": ":15:9:15:69"
+                                }
+                            ],
+                            "src": ":6:75:16:6"
+                        },
+                        "static": false,
+                        "visibility": "Public",
+                        "params": [
+                            {
+                                "nodeType": "Parameter",
+                                "name": "txPreimage",
+                                "src": ":6:35:6:61",
+                                "const": false,
+                                "type": "SigHashPreimage"
+                            },
+                            {
+                                "nodeType": "Parameter",
+                                "name": "amount",
+                                "src": ":6:63:6:73",
+                                "const": false,
+                                "type": "int"
+                            }
+                        ],
+                        "name": "increment_num",
+                        "src": ":6:12:16:6",
+                        "returnType": null
+                    }
+                ],
+                "properties": [
+                    {
+                        "nodeType": "Property",
+                        "state": true,
+                        "visibility": "Default",
+                        "name": "counter",
+                        "src": ":4:5:4:16",
+                        "const": false,
+                        "type": "int"
+                    }
+                ]
+            }
+        ],
+        "src": ":1:1:17:2"
+    }
+}

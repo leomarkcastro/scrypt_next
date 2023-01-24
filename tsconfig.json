@@ -19,6 +19,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "tools/compile_contract.js",
+    "tools/compile_contract.js"
+  ],
   "exclude": ["node_modules"]
 }
